@@ -1,0 +1,29 @@
+@import "./_variables";
+
+.my_skills{
+    font-family: $ff;
+    color: $hColor;
+    width: 90%;
+    min-height:15rem;
+    margin: 1rem auto;
+    padding: 1rem ;
+
+    >h2{
+        font-size: 2.5rem;
+    }
+
+    .bg-box{
+        width: 100%;
+        min-height:10rem ;
+        border: 1px solid red;
+        margin: 1rem 0;
+
+        .skill{
+            width: 12rem;
+            height: 5rem;
+            border: 1px solid #222f43;
+            border-radius: 15px;
+            background: $softBgColor;
+        }
+    }
+}

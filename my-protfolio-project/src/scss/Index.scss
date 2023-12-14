@@ -1,0 +1,13 @@
+@import './_variables';
+
+section{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $bgColor;
+    main{
+        width:100%;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+}
+
