@@ -2,11 +2,8 @@ import '../scss/Nav.scss';
 import Logo from '../assets/images/Logo.png';
 import { useEffect, useState } from 'react';
 const Nav = () => {
-    const [isDarkTheme, setIsDarkTheme] = useState(true)
     const [isOpen, setIsOpen] = useState(false)
-    const toggleDarkMode = () => {
-        setIsDarkTheme(!isDarkTheme);
-    };
+  
     const toggleHam = () => {
         setIsOpen(!isOpen);
         
@@ -36,7 +33,7 @@ const Nav = () => {
                 </li>
                 <li>
                     <p>
-                    Features
+                    Toolbox
                     </p>
                 </li>
                 <li>
@@ -49,13 +46,7 @@ const Nav = () => {
                         Contact
                     </p>
                 </li>
-                <div className={`darkModeContainer  ${isDarkTheme ? '' : 'lightMode'}`}>
-                    <div onClick={toggleDarkMode}>
-                        <span className="material-symbols-outlined">
-                            {isDarkTheme ? 'dark_mode' : 'routine'}
-                        </span>
-                    </div>
-                </div>
+              
                 <button>
                     Resume
                 </button>
@@ -63,13 +54,7 @@ const Nav = () => {
             <div id="mobileLinks" 
             className={`${isOpen ? 'activeMobleLinks' : ''}`}>
                 <div className="mobile-top-box">
-                    <div className={`darkModeContainer  ${isDarkTheme ? '' : 'lightMode'}`}>
-                        <div onClick={toggleDarkMode}>
-                            <span className="material-symbols-outlined">
-                                {isDarkTheme ? 'dark_mode' : 'routine'}
-                            </span>
-                        </div>
-                    </div>
+                    
                     <button>
                         Resume
                     </button>

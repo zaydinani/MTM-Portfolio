@@ -4,6 +4,7 @@ import Nav from '../Components/Nav';
 import About from '../Components/About';
 import Projects from '../Components/Projects';
 import Skills from '../Components/Skills';
+import Blog from '../Components/Blog';
 import { useEffect, useState } from 'react';
 const Main = ()=>{
 
@@ -17,7 +18,8 @@ const Main = ()=>{
                 <Projects /> 
             {/* // Skills */}
                 <Skills /> 
-            {/* // articles */}
+            {/* // Blog */}
+                <Blog /> 
             {/* // contact */}
         </main>
     </section>)

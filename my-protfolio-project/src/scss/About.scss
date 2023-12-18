@@ -119,7 +119,7 @@
             object-fit: contain;
             z-index: 2;
             transition: .3s ease-in;
-            filter: contrast(1.2);
+            filter: contrast(1.25);
         }
     }
     .bg-shape {
@@ -265,9 +265,12 @@
                 right: 1rem;
             }
             > img {
-                width: 70%;
+                width: 90% !important;
                 height: 100%;
             }
+        }
+        button{
+            width: 100% !important;
         }
     }
 }

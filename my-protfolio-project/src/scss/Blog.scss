@@ -1,0 +1,30 @@
+@import "./_variables";
+
+#blog{
+    width: 100%;
+    min-height: 20rem;
+    font-family: $ff;
+    
+    
+    .articles-container{
+        border: 1px solid #fa2601;
+
+        >h2 {
+            color: #0099ff;
+            font-size: 2.5rem;
+            padding: 1rem ;
+        }
+            width: 90%;
+            min-height: 10rem;
+            margin: 1rem auto;
+
+            article{
+                width: 90%;
+                height: 16rem;
+                margin: 1rem auto;
+                border: 1px solid #222f43;
+                border-radius: 10px;
+            }
+
+    }
+}
