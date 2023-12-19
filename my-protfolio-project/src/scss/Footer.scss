@@ -1,0 +1,75 @@
+@import "./_variables";
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+footer {
+    width: 80%;
+    height: 24rem;
+    margin: 2rem auto 0 auto;
+    border: 1px solid #222f43;
+    font-family: $ff;
+    border-radius: 20px;
+    background: #131c31;
+    @include flex($jc: space-between);
+
+    > div {
+        width: 30%;
+        height: 100%;
+        border: 1px solid red;
+        color: $pColor;
+        #logoContainer {
+            width: 100%;
+            margin: 1rem 0;
+            @include flex();
+            gap: 5px;
+            cursor: pointer;
+            > img {
+                height: 5rem;
+                width: 5rem;
+                object-fit: contain;
+            }
+            > p {
+                font-family: "Rammetto One", cursive;
+                color: red;
+                font-size: 3.3rem;
+                opacity: .85;
+                padding: 0;
+            }
+        }
+    }
+    .col-1 {
+        position: relative;
+        p {
+            font-size: 0.9rem;
+            padding: 1rem;
+        }
+        >span{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: .9rem;
+        }
+    }
+    .col-2{
+        a{color:$pColor;}
+        @include flex($jc:flex-start);
+        flex-direction: column;
+        h3
+        {
+            font-size: 2rem;
+            padding: 2rem 0 1rem 0;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        li{
+            margin-top: 1.5rem;
+            a:hover{
+                color: #fff;
+            }
+        }
+    }
+    .col-3{
+        @include flex($jc:flex-start);
+        flex-direction: column;
+       
+    }
+
+}
