@@ -1,0 +1,61 @@
+@import "./_variables";
+
+
+.contact-container{
+    width: 100%;
+    min-height: 20rem;
+    border: 1px solid red;
+    font-family: $ff;
+    h3
+    {
+        text-align: center;
+        font-size: 3rem;
+        color: #00a2fffc;
+        padding: 1rem 0;
+        
+    }
+    
+    >form
+    {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+
+        input{
+            margin:.5rem 0 ;
+            height: 2rem;
+            background: transparent;
+            border:none ;
+            color: #fff;
+            border-bottom: 1px solid $pColor;
+        }
+
+        >button{
+            width: 8rem;
+            height: 2.5rem;
+            margin-top: 1rem ;
+            background: #00a2fffc;
+            transition: .5s ease-in-out;
+            background: linear-gradient(150deg, rgba(34, 192, 195, 0.931) 0%, rgba(45, 149, 253, 0.931) 100%);
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            color: #fff; 
+            position: relative;  
+            overflow: hidden;             
+            &:hover {
+                background: linear-gradient(85deg, rgba(34, 192, 195, 0.985) 0%, rgba(13, 133, 253, 0.983) 100%);
+                transform: scale(1.05);
+            }
+            >svg{
+                margin-left: 5px;
+            }
+            &:hover svg{
+                transition: .5s ease-in-out;
+                transform: translateX(10rem);
+            }
+        }
+    }
+}

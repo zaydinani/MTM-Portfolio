@@ -4,6 +4,8 @@ import Logo from '../assets/images/Logo.png';
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 const Footer = ()=>{
     return (
         <footer>
@@ -13,10 +15,14 @@ const Footer = ()=>{
                 <p>TM</p>
             </div>
                 <p>
-                    Passionate full-stack developer, transforming code into captivating creations, eager to illuminate the digital realm with precision and creativity.
+                    
+                Passionate about coding and creating, I am a dedicated full-stack developer eager to bring precision and creativity to the digital world.
+                </p>
+                <p>
+                 My focus is on transforming code into captivating creations, ensuring a seamless and engaging user experience. With a keen eye for detail, I thrive on optimizing both front-end interfaces and back-end functionality.
                 </p>
 
-                <span>&copy; Copyright  MTM 2024</span>
+                <span>&copy; Copyright  <b>MTM</b> 2024</span>
             </div>
             <div className="col-2">
                 <h3>Links</h3>
@@ -45,14 +51,26 @@ const Footer = ()=>{
                 <h3>Newsletter</h3>
                 <p>Stay ahead in the world of web development. Join us for inspiring stories, expert insights, and the latest trends</p>
                 <form>
-                    <input type="text" name="name" />
-                    <input type="email" name="email" />
-                    <button>SEND</button>
+                    <input type="text" name="name" placeholder="Name"/>
+                    <input type="email" name="email" placeholder="Email"/>
+                    <button>
+                        SUBSCRIBE
+                        <FaLongArrowAltRight />   
+                    </button>
                 </form>
                 <div className="s-m-icons">
-                    <FaSquareFacebook />
-                    <FaInstagramSquare />
-                    <IoLogoLinkedin />
+                    <a href="#">
+                        <FaSquareFacebook />
+                    </a>
+                    <a href="#">
+                        <FaInstagramSquare />
+                    </a>
+                    <a href="#">
+                        <IoLogoLinkedin />
+                    </a>
+                    <a href="#">
+                        <MdEmail />
+                    </a>
                 </div>
             </div>
         </footer>

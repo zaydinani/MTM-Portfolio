@@ -5,6 +5,7 @@ import About from '../Components/About';
 import Projects from '../Components/Projects';
 import Skills from '../Components/Skills';
 import Blog from '../Components/Blog';
+import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 import { useEffect, useState } from 'react';
 const Main = () => {
@@ -23,6 +24,7 @@ const Main = () => {
                     {/* // Blog */}
                     <Blog />
                     {/* // contact */}
+                    <Contact />
                 </main>
                 {/* // footer */}
                 <Footer />
