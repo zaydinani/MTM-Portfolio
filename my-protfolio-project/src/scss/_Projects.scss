@@ -1,0 +1,125 @@
+@import './_variables';
+
+
+.Projects-container-box{
+
+    width: 100%;
+    min-height: 80vh;
+    font-family: $ff;
+    color: $pColor;
+    .pp-header{
+        width: 100%;
+        min-height: 16rem;
+        background-color: #17223b;
+        @include flex();
+        gap: 2rem;
+        h4{
+            font-size: 2.5rem;
+            color: $primaryColor;
+        }
+        p{
+            font-size: .9rem;
+            padding: 15px 0;
+        }
+        >img{
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            object-fit: contain;
+            border: 2px solid $primaryColor;
+        }
+        svg {
+            margin: 0 1rem 0 0;
+            font-size: 1.2rem;
+        }
+        >div{width: 50%;}
+    }
+
+    .p-container{
+        width: 80%;
+        min-height: 30rem;
+        margin: 2rem auto;
+       
+        .ph-container{
+            @include flex();
+            width: 100%;
+            margin: 1rem auto;
+            gap: 1rem;
+        }
+        .p-box-xl{
+            width: 35rem;
+            height: 30rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            background: #0F172A;
+            border: 1px solid $borderColor;
+            transition: .3s ease-in-out;
+            &:hover {
+                transform: scale(1.01);
+            }
+            img{
+                width: 33rem;
+                border-radius: 10px;
+                object-fit: contain;
+            }
+            b{
+                padding: 1rem 0;
+            }
+            p{
+                font-size: .8rem;
+            }
+
+            .links{
+                align-self: flex-end;
+                svg{
+                    font-size: 1.2rem;
+                    margin: 5px;
+                }
+            }
+        }
+
+        .pb-container{
+            width: 100%;
+            margin: 1rem auto;
+            @include flex();
+            flex-wrap: wrap;
+            gap: 1rem;
+            >div{
+                @include flex();
+                width: 100%;
+                gap: 15px;
+            }
+            .p-box{
+                width: 23rem;
+                height: 20rem;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                background: #0F172A;
+                border: 1px solid $borderColor;
+                transition: .3s ease-in-out;
+                &:hover {
+                    transform: scale(1.01);
+                }
+                img{
+                    width: 21rem;
+                    border-radius: 10px;
+                    object-fit: contain;
+                }
+                b{
+                    padding: .6rem 0;
+                }
+                .links{
+                    align-self: flex-end;
+                    svg{
+                        font-size: 1rem;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

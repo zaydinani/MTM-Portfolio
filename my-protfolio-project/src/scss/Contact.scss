@@ -3,67 +3,95 @@
 
 .contact-container{
     width: 100%;
-    min-height: 20rem;
+    min-height: 70vh;
     font-family: $ff;
     margin-top: 3rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     h3
     {
         font-size: 3rem;
         color: #00a2fffc;
         padding: 0 10%;
+        width: 100%;
     }
-    
-    >form
+    >div
     {
-        width: 50vw;
-        margin: 1rem 10%;
         display: flex;
-        flex-direction: column;
-
-        input{
-            height: 3rem;
-        }
-        textarea{
-            height: 10rem;
-        }
-
-        input,
-        textarea
+        align-items: center;
+        margin: 2rem 0;
+        width: 100%;
+        >form
         {
-            outline: none;
-            border:none ;
-            color: #fff;
-            border: 1px solid #222F43;
-            padding: 0.5rem 1rem;
-            background: transparent;
-            transition: .3s ease-in;
-            margin-top: 1rem;
-            border-radius: 4px 4px 4px 4px ;
+            width: 50%;
+            margin: 1rem 10%;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
 
-        }
-        input:hover,
-        textarea:hover
-        {
-            border: 1px solid $pColor;
-        }
-        >button{
-            width: 12rem;
-            height: 3rem;
-            margin-top: 1rem ;
-            background: #00a2fffc;
-            transition: .5s ease-in-out;
-            background: linear-gradient(150deg, rgba(34, 192, 195, 0.931) 0%, rgba(45, 149, 253, 0.931) 100%);
-            border-radius: 2px;
-            cursor: pointer;
-            border: none;
-            color: #fff; 
-            position: relative;  
-            overflow: hidden;             
-            &:hover {
-                background: linear-gradient(85deg, rgba(34, 192, 195, 0.985) 0%, rgba(13, 133, 253, 0.983) 100%);
-                transform: scale(1.02);
+            input{
+                height: 3rem;
             }
-         
+            textarea{
+                height: 10rem;
+            }
+    
+            input,
+            textarea
+            {
+                outline: none;
+                border:none ;
+                color: #fff;
+                border: 1px solid #222F43;
+                padding: 0.5rem 1rem;
+                background: transparent;
+                transition: .3s ease-in;
+                margin-top: 1rem;
+                border-radius: 4px 4px 4px 4px ;
+                z-index: 2;
+                background: $bgColor;
+            }
+            input:hover,
+            textarea:hover
+            {
+                border: 1px solid $pColor;
+            }
+            >button{
+                width: 100%;
+                height: 3rem;
+                margin-top: 1rem ;
+                background: #00a2fffc;
+                transition: .5s ease-in-out;
+                background: linear-gradient(150deg, rgba(34, 192, 195, 0.931) 0%, rgba(45, 149, 253, 0.931) 100%);
+                border-radius: 2px;
+                cursor: pointer;
+                border: none;
+                color: #fff; 
+                position: relative;  
+                &:hover {
+                    background: linear-gradient(85deg, rgba(34, 192, 195, 0.985) 0%, rgba(13, 133, 253, 0.983) 100%);
+                }
+             
+            }
         }
+    
+        .svg-container{
+            width: 50%;
+            min-height: 22rem;
+            @include flex($jc:flex-start);
+
+            img{
+                width: 60%;
+                opacity: .95;
+            }
+        }
+
     }
+}
+
+@keyframes scale {
+    0%{transform: scale(1) translateY(-50%);}    
+    50%{transform: scale(1.1) translateY(-55%);}    
+    100%{transform: scale(1) translateY(-50%);}    
 }

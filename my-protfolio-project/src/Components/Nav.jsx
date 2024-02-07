@@ -47,17 +47,17 @@ const Nav = () => {
                     </p>
                 </li>
               
-                <button>
+                {/* <button>
                     Resume
-                </button>
+                </button> */}
             </ul>
             <div id="mobileLinks" 
             className={`${isOpen ? 'activeMobleLinks' : ''}`}>
                 <div className="mobile-top-box">
                     
-                    <button>
+                    {/* <button>
                         Resume
-                    </button>
+                    </button> */}
                 </div>
 
                 <li>

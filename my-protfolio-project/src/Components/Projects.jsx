@@ -44,7 +44,7 @@ const Projects = () => {
                                 <i class="fa-solid fa-link"></i>
                             </a>
                             <a href="#">
-                            <i class="fa-brands fa-github-alt"></i>
+                                <i class="fa-brands fa-github-alt"></i>
                             </a>
                             </div>
                         </div>

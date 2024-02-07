@@ -6,6 +6,8 @@ $bgColor :#0a192f;
 $softBgColor : #131C31;
 $pColor : #7f92b0;
 $hColor : #fff;
+$borderColor: #222F43;
+$primaryColor:#0099ff;
 @mixin flex($jc : center ,$ai: center)
 {
   display: flex;

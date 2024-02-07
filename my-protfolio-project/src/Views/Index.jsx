@@ -7,6 +7,10 @@ import Skills from '../Components/Skills';
 import Blog from '../Components/Blog';
 import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
+import Article from './Article';
+import Articles from './Articles';
+import _Projects from './Projects';
+import Project from './Project';
 import { useEffect, useState } from 'react';
 const Main = () => {
 
@@ -14,18 +18,21 @@ const Main = () => {
 
             <section>
                 <Nav />
-                <main>
+                {/* <main> */}
                     {/* // about */}
-                    <About />
+                        {/* <About /> */}
                     {/* // Projects */}
-                    <Projects />
+                        {/* <Projects /> */}
                     {/* // Skills */}
-                    <Skills />
+                        {/* <Skills /> */}
                     {/* // Blog */}
-                    <Blog />
+                        {/* <Blog /> */}
                     {/* // contact */}
-                    <Contact />
-                </main>
+                        {/* <Contact /> */}
+                {/* </main> */}
+
+                    <Project />
+
                 {/* // footer */}
                 <Footer />
                 <div className='void'></div>
