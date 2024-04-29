@@ -4,7 +4,7 @@ nav {
     width: 100vw;
     height: 5.5rem;
     @include flex($jc: space-between);
-    padding: 0 10vw;
+    padding: 0 10vw 0 8.5vw;
     color: #949b9b;
     font-family: $ff;
     position: relative;
@@ -19,11 +19,6 @@ nav {
             height: 3.2rem;
             width: 3.2rem;
             object-fit: contain;
-        }
-        > p {
-            font-family: "Rammetto One", cursive;
-            color: red;
-            font-size: 1.5rem;
         }
     }
     ul {
@@ -237,9 +232,10 @@ nav {
                 flex-wrap: wrap;
                 span {
                     font-size: 0.9rem;
-                    color: #e81010;
+                    color: #2898E0;
                     padding: 0 1rem 0 5px;
                     margin-right: 2rem;
+                    font-weight: bold;
                 }
             }
         }
@@ -255,7 +251,7 @@ nav {
 }
 @media screen and (max-width:550px) {
     nav{
-        padding: 0 8vw !important;
+        padding: 0 3rem 0 1rem!important;
     #logoContainer {
         >img{
             width: 2.5rem !important;
@@ -269,10 +265,9 @@ nav {
     #mobileLinks {
         width: 100vw !important;
         padding: 0 6vw !important;
-
     }
     
 }
-.activeMobleLinks{
+.activeMobileMenu{
     transform: translateX(0) !important;
 }

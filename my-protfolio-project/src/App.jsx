@@ -1,6 +1,8 @@
 import Loader from './Views/loader';
 import Index from './Views/Index';
 import './scss/App.scss';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import { useEffect, useState } from 'react';
 
 
@@ -14,15 +16,18 @@ function App() {
     }, 1500);
   }, [])
   return (
-    <div className="ReactApp">
+    <Router>
 
-      {isLoaded ? (
-        <Index />
-      ) : (
-        <Loader />
-      )}
+      <div className="ReactApp">
 
-    </div>
+        {isLoaded ? (
+          <Index />
+        ) : (
+          <Loader />
+        )}
+
+      </div>
+    </Router>
   )
 }
 

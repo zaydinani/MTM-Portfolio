@@ -12,7 +12,6 @@ const Footer = ()=>{
             <div className="col-1">
             <div id="logoContainer">
                 <img src={Logo} alt="logo-MTM" />
-                <p>TM</p>
             </div>
                 <p>
                     

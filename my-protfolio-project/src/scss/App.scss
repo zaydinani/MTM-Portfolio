@@ -34,8 +34,44 @@
             }
         }
     }
+
+    .wrapper-animation{
+        width: 60vw;
+        height: 60vh;
+        position: relative;
+        img{
+            width: 30vw;
+            opacity: 0;
+            &.visible {
+                animation: show 1s forwards;
+            }
+        }
+        #one{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #two{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #three{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
 }
 
+@keyframes show {
+    to {
+        opacity: 1;
+    }
+}
 @keyframes write {
     to {
         opacity: 1;

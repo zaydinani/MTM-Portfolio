@@ -4,7 +4,7 @@ const Project = () => {
     return (
         <div id="sp__box">
 
-            <div className="single-project-section blur">
+            <div className="single-project-section ">
                 <h1 className="project-title ">
                     Lorem ipsum dolor sit amet.
                 </h1>
@@ -31,13 +31,41 @@ const Project = () => {
                     </div>
                 </div>
 
+                <div className="long-desc">
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum animi voluptatibus architecto? Ea dignissimos expedita recusandae adipisci sint quos, ipsum quas in enim quidem, numquam at blanditiis. Sit impedit ex necessitatibus et ullam accusamus eum aliquid nobis perferendis aut corrupti vero velit totam aperiam cum, architecto dolores, voluptatum laboriosam porro! Quis enim quaerat quidem modi culpa quasi ad, ratione cumque corporis saepe architecto praesentium beatae iure veniam tempore sed blanditiis ipsam voluptas aut reiciendis amet, quae ex.</p>
+
+                    <ul>
+                        <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ea a consequuntur voluptatum assumenda sit.
+                        </li>
+                        <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ea a consequuntur voluptatum assumenda sit.
+                        </li>
+                        <li>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ea a consequuntur voluptatum assumenda sit.
+                        </li>
+                    </ul>
+                    <h4>SOME PICTURES</h4>
+                    <div className="P-wrapper">
+                        <img src="https://mockuphunt.co/cdn/shop/products/The-Screen-Free-Perspective-PSD-Mockup-prev02_900x.jpg?v=1524658346" alt="website display" />
+                        <img src="https://mockuphunt.co/cdn/shop/products/The-Screen-Free-Perspective-PSD-Mockup-prev02_900x.jpg?v=1524658346" alt="website display" />
+                        <img src="https://mockuphunt.co/cdn/shop/products/The-Screen-Free-Perspective-PSD-Mockup-prev02_900x.jpg?v=1524658346" alt="website display" />
+                        <img src="https://mockuphunt.co/cdn/shop/products/The-Screen-Free-Perspective-PSD-Mockup-prev02_900x.jpg?v=1524658346" alt="website display" />
+                        <img src="https://mockuphunt.co/cdn/shop/products/The-Screen-Free-Perspective-PSD-Mockup-prev02_900x.jpg?v=1524658346" alt="website display" />
+                        <img src="https://mockuphunt.co/cdn/shop/products/The-Screen-Free-Perspective-PSD-Mockup-prev02_900x.jpg?v=1524658346" alt="website display" />
+                    </div>
+
+                </div>
+
             </div>
 
-            <div className="gallery-container">
+            {/* <div className="gallery-container">
                 <span className="close-gall">
                     X
                 </span>
-            </div>
+            </div> */}
         </div>
     )
 }

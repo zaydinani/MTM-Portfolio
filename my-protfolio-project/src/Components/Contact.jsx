@@ -3,7 +3,7 @@ import "../scss/Contact.scss";
 import svg from '../assets/images/example-animate.svg'
 const Contact = () => {
     return (
-        <div className="contact-container">
+        <div id="contact-container">
             <h3>Reach out</h3>
             <div>
                 <form>

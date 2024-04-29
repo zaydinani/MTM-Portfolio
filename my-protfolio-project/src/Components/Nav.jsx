@@ -1,58 +1,62 @@
-import '../scss/Nav.scss';
+import React, { useEffect, useState } from 'react';
 import Logo from '../assets/images/Logo.png';
-import { useEffect, useState } from 'react';
+import '../scss/Nav.scss';
+
 const Nav = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
   
     const toggleHam = () => {
         setIsOpen(!isOpen);
         
+        // Toggle body overflow based on menu state
         if (!isOpen) {
-            document.body.style.overflow = 'hidden';
+            document.querySelector('section').style.overflow = 'hidden';
+            document.querySelector('section').style.position = 'fixed';
+           
         } else {
-            document.body.style.overflow = 'auto';
+            document.querySelector('section').style.overflow = 'auto';
+            document.querySelector('section').style.position = 'static';
         }
-    }
+    };
+
+
+    // Scroll to the specified section
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Close the mobile menu after clicking on a link
+        setIsOpen(false);
+        document.querySelector('section').style.overflow = 'auto';
+    };
+
     return (
         <nav>
             <div id="logoContainer">
                 <img src={Logo} alt="logo-MTM" />
-                <p>TM</p>
             </div>
-
             <ul id="Links">
+                {/* Use Link component for navigation */}
                 <li>
-                    <p>
-                        About
-                    </p>
+                    <p onClick={() => scrollToSection('about_me')}>About</p>
                 </li>
                 <li>
-                    <p>
-                        Projects
-                    </p>
+                    <p onClick={() => scrollToSection('projects-container')}>Projects</p>
                 </li>
                 <li>
-                    <p>
-                    Toolbox
-                    </p>
+                    <p onClick={() => scrollToSection('my_skills')}>Toolbox</p>
                 </li>
                 <li>
-                    <p>
-                        Blog
-                    </p>
+                    <p onClick={() => scrollToSection('blog')}>Blog</p>
                 </li>
                 <li className='contact'>
-                    <p>
-                        Contact
-                    </p>
+                    <p onClick={() => scrollToSection('contact-container')}>Contact</p>
                 </li>
-              
-                {/* <button>
-                    Resume
-                </button> */}
             </ul>
+            {/* Mobile menu */}
             <div id="mobileLinks" 
-            className={`${isOpen ? 'activeMobleLinks' : ''}`}>
+            className={`${isOpen ? 'activeMobileMenu' : ''}`}>
                 <div className="mobile-top-box">
                     
                     {/* <button>
@@ -61,18 +65,18 @@ const Nav = () => {
                 </div>
 
                 <li>
-                    <p>
+                    <p onClick={() => scrollToSection('about_me')}>
                         About
                     </p>
                 </li>
                 <li>
-                    <p>
+                    <p onClick={() => scrollToSection('projects-container')}>
                         Projects
                     </p>
                 </li>
                 <li>
-                    <p>
-                        Exprience
+                    <p onClick={() => scrollToSection('my_skills')}>
+                        Toolbox
                     </p>
                 </li>
                 <li>
@@ -81,27 +85,26 @@ const Nav = () => {
                     </p>
                 </li>
                 <li className='contact'>
-                    <p>
+                    <p onClick={() => scrollToSection('contact-container')}>
                         Contact
                     </p>
                 </li>
                 <div className="linksFooter">
                     <p>
-                        Copyright 2023 &copy;
+                        Copyright 2024 &copy;
                         <span>MTM</span>
                     </p>
                     <p>Personal Portfolio website</p>
                 </div>
             </div>
-            <div onClick={toggleHam} id="HamMenuBox" className={`
-                ${isOpen ? 'clickedHam' : ''}
-            `}>
+            {/* Hamburger menu icon */}
+            <div onClick={toggleHam} id="HamMenuBox" className={`${isOpen ? 'clickedHam' : ''}`}>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
         </nav>
-    )
+    );
 }
 
 export default Nav;

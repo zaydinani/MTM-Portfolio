@@ -3,7 +3,7 @@ import '../scss/Projects.scss';
 const Projects = () => {
     const divs = Array(3).fill(null);
     return (
-        <div id="projects-conatiner">
+        <div id="projects-container">
             <div className="subs-wrapper">
                 <p>Be the first to know! Subscribe for the latest news , projects and more ...</p>
                 <div className="formWrapper">
@@ -41,15 +41,15 @@ const Projects = () => {
                             </p>
                             <div>
                             <a href="#">
-                                <i class="fa-solid fa-link"></i>
+                                <i className="fa-solid fa-link"></i>
                             </a>
                             <a href="#">
-                                <i class="fa-brands fa-github-alt"></i>
+                                <i className="fa-brands fa-github-alt"></i>
                             </a>
                             </div>
                         </div>
                         <div className="full-screen-view">
-                            <i class="fa-solid fa-eye"></i>
+                            <i className="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 ))}

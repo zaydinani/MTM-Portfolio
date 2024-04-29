@@ -45,7 +45,7 @@ const skillsList = [
 
 const Skills = () => {
   return (
-    <div className="my_skills">
+    <div id="my_skills">
       <h2>My Tech Toolbox</h2>
       <div className="bg-box">
         {skillsList.map((skill, index) => (

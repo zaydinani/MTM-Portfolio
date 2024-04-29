@@ -1,6 +1,6 @@
 @import "./_variables";
 
-#projects-conatiner {
+#projects-container {
     width: 100%;
     min-height: 100vh;
     border-top: none;
@@ -185,7 +185,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-    #projects-conatiner {
+    #projects-container {
         .subs-wrapper {
             width: 95% !important;
             > div {
@@ -199,7 +199,7 @@
     }
 }
 @media screen and (max-width: 768px) {
-    #projects-conatiner {
+    #projects-container {
         .subs-wrapper {
             width: 100% !important;
             border-radius: 0 !important;
@@ -229,7 +229,7 @@
     }
 }
 @media screen and (max-width: 550px) {
-    #projects-conatiner {
+    #projects-container {
         .subs-wrapper {
             > div {
                 width: 95% !important;
@@ -247,7 +247,7 @@
     }
 }
 @media screen and (max-width: 350px) {
-    #projects-conatiner {
+    #projects-container {
         .subs-wrapper {
             > div {
                 width: 95% !important;

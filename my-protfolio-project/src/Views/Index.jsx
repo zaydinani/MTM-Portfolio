@@ -18,20 +18,19 @@ const Main = () => {
 
             <section>
                 <Nav />
-                {/* <main> */}
+                 <main> 
                     {/* // about */}
-                        {/* <About /> */}
+                        <About /> 
                     {/* // Projects */}
-                        {/* <Projects /> */}
+                         <Projects /> 
                     {/* // Skills */}
-                        {/* <Skills /> */}
+                         <Skills /> 
                     {/* // Blog */}
-                        {/* <Blog /> */}
+                         <Blog /> 
                     {/* // contact */}
-                        {/* <Contact /> */}
-                {/* </main> */}
+                         <Contact /> 
+                 </main> 
 
-                    <Project />
 
                 {/* // footer */}
                 <Footer />
