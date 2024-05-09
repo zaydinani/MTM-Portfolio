@@ -1,5 +1,6 @@
 import React from "react";
 import "../scss/Blog.scss";
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     // Dummy data for articles
@@ -22,7 +23,7 @@ const Blog = () => {
             date: '10 min read',
             classType: 'coll'
         },
-        
+
     ];
 
     return (
@@ -56,6 +57,11 @@ const Blog = () => {
                     </article>
                 ))}
             </div>
+                <div className="paginate-btn">
+                    <Link to="/blog">
+                        SHOW MORE
+                    </Link>
+                </div>
         </section>
     );
 };

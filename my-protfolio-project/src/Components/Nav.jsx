@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '../assets/images/Logo.png';
 import '../scss/Nav.scss';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,9 @@ const Nav = () => {
     return (
         <nav>
             <div id="logoContainer">
-                <img src={Logo} alt="logo-MTM" />
+                <Link to='/' >
+                    <img src={Logo} alt="logo-MTM" />
+                </Link>
             </div>
             <ul id="Links">
                 {/* Use Link component for navigation */}

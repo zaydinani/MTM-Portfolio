@@ -1,5 +1,5 @@
 import '../scss/Projects.scss';
-
+import { Link } from 'react-router-dom';
 const Projects = () => {
     const divs = Array(3).fill(null);
     return (
@@ -54,7 +54,9 @@ const Projects = () => {
                     </div>
                 ))}
                 <div className="paginate-btn">
-                    <button>SHOW MORE</button>
+                    <Link to="/projects">
+                        SHOW MORE
+                    </Link>
                 </div>
             </div>
         </div>

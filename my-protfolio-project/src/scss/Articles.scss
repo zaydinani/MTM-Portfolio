@@ -7,6 +7,7 @@
     margin: 2rem auto;
     color: $pColor;
     font-family: $ff;
+
     header
     {
         width: 100%;
@@ -48,11 +49,13 @@
 
     .article-wrapper
     {
+        
         width: 80%;
         min-height: 16rem;
         margin: 1rem auto;
         display: flex;
         border-bottom: 1px solid $borderColor;
+
         .author{
             width: 25%;
             min-height: 16rem;

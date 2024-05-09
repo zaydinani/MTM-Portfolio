@@ -1,16 +1,19 @@
 import react from "react";
 import "../scss/_Projects.scss";
-import author from '../assets/images/my-pic.webp'
+import author from '../assets/images/author.jpg'
 import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
+
+import ScrollToTop from '../js/scrollToTop';
 const Projects = () => {
 
     return(
         <div className="Projects-container-box">
+            <ScrollToTop />
             <div className="pp-header">
                 <img src={author} alt="author" />
                 <div>

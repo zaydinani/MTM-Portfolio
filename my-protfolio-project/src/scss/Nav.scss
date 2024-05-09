@@ -15,7 +15,7 @@ nav {
         @include flex();
         gap: 5px;
         cursor: pointer;
-        > img {
+        > a >  img {
             height: 3.2rem;
             width: 3.2rem;
             object-fit: contain;

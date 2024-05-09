@@ -1,8 +1,9 @@
 import React from "react";
 import '../scss/Articles.scss';
 import { BiSolidHomeSmile } from "react-icons/bi";
-import author from '../assets/images/author.png'
+import author from '../assets/images/author.jpg'
 import { FaRegClock } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const Articles = () => {
     const articleData = [
@@ -38,7 +39,7 @@ const Articles = () => {
     return (
         <div id="Articles-section">
             <header>
-                <h1>Lorem, ipsum dolor.</h1>
+                <h1>Lorem, ipsum dolors.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate est cum hic, ipsam vel sint quo neque veniam eum error, suscipit quasi sed. Ab nostrum nemo consectetur voluptate quaerat ipsam.</p>
                 <ul>
                     <li>
@@ -94,6 +95,11 @@ const Articles = () => {
                                 {article.readTime}
                             </b>
                         </div>
+                    </div>
+                    <div className="paginate-btn">
+                        <Link to="/projects">
+                            SHOW MORE
+                        </Link>
                     </div>
                 </div>
             ))}

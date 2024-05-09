@@ -1,42 +1,28 @@
 import '../scss/Index.scss';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
 import Nav from '../Components/Nav';
-import About from '../Components/About';
-import Projects from '../Components/Projects';
-import Skills from '../Components/Skills';
-import Blog from '../Components/Blog';
-import Contact from '../Components/Contact';
+import Home from './Home';
 import Footer from '../Components/Footer';
-import Article from './Article';
 import Articles from './Articles';
-import _Projects from './Projects';
-import Project from './Project';
-import { useEffect, useState } from 'react';
+import Projects from './Projects';
+import ScrollToTop from '../js/scrollToTop';
+
 const Main = () => {
-
     return (
-
+         <Router>
+             <ScrollToTop />
             <section>
                 <Nav />
-                 <main> 
-                    {/* // about */}
-                        <About /> 
-                    {/* // Projects */}
-                         <Projects /> 
-                    {/* // Skills */}
-                         <Skills /> 
-                    {/* // Blog */}
-                         <Blog /> 
-                    {/* // contact */}
-                         <Contact /> 
-                 </main> 
-
-
-                {/* // footer */}
+                <Routes> 
+                    <Route path="/" element={<Home />} />
+                    <Route path="/blog" element={<Articles />} />
+                    <Route path="/projects" element={<Projects />} />
+                </Routes>
                 <Footer />
                 <div className='void'></div>
             </section>
-    )
-}
+        </Router>
+    );
+};
 
 export default Main;

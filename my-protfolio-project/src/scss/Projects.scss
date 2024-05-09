@@ -163,13 +163,14 @@
             padding: 4rem 0;
             width: 100%;
             @include flex();
-            > button {
+            > a {
                 width: 12rem;
                 height: 3.5rem;
                 margin-left: 1rem;
                 border: none;
                 font-size: 95%;
                 color: $hColor;
+                @include flex();
                 background: #00a2fffc;
                 background: linear-gradient(150deg, rgba(34, 192, 195, 0.931) 0%, rgba(45, 149, 253, 0.931) 100%);
                 border-radius: 100px;
