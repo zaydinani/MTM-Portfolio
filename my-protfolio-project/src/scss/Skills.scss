@@ -48,3 +48,53 @@
         }
     }
 }
+@media screen and (max-width: 425px) {
+
+    #my_skills{
+        width: 97%;
+        padding:0  .5rem ;
+        
+        
+        .bg-box{
+            width: 100%;
+            gap: .5rem;
+            .skill{
+                width: 10rem;
+                height: 5rem;
+              
+    
+            }
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+
+    #my_skills{
+        width: 97%;
+        padding:0  .2rem ;
+        >h2{
+            font-size: 2rem;
+            padding: 0 .2rem;
+        }
+        .bg-box{
+            width: 100%;
+            gap: .5rem;
+            .skill{
+                width: 8rem;
+                height: 5rem;
+                font-size: .8rem;
+               >img{
+                width: 2rem;
+               }
+    
+            }
+            .Learning{
+                width: 32px !important;
+                height: 32px !important;
+            }
+            .p-WooCommerce{
+                    font-size: .6rem !important;
+            }
+        }
+    }
+}

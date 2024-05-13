@@ -8,6 +8,7 @@ const Blog = () => {
         {
             id: 1,
             title: 'Lorem ipsum dolor sit amet consectetur.',
+            slug:'blog-slug',
             imageUrl: 'https://i0.wp.com/plopdo.com/wp-content/uploads/2021/07/Screenshot-1.png?resize=1210%2C642&ssl=1',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, nobis quos sed consequuntur ex quae quaerat. Nulla culpa laudantium perspiciatis. Magni molestiae quisquam doloribus sint!...',
             tags: ['#Frontend', '#Reactjs'],
@@ -17,6 +18,27 @@ const Blog = () => {
         {
             id: 1,
             title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor',
+            slug:'blog-slug',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNLEqNUXbu_GNn6jJvgN9Or_0KMVZt47em5rnVCS4NeRK2q3eDBUKXk-HSXnN5nfUw2s&usqp=CAU',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, nobis quos sed consequuntur ex quae quaerat. Nulla culpa laudantium perspiciatis. Magni molestiae quisquam equuntur ex quae quaerat. Nulla culpa laudantium perspiciatis. Magni modoloribus sint!...',
+            tags: ['#Frontend', '#Reactjs'],
+            date: '10 min read',
+            classType: 'coll'
+        },
+        {
+            id: 1,
+            title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor',
+            slug:'blog-slug',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNLEqNUXbu_GNn6jJvgN9Or_0KMVZt47em5rnVCS4NeRK2q3eDBUKXk-HSXnN5nfUw2s&usqp=CAU',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, nobis quos sed consequuntur ex quae quaerat. Nulla culpa laudantium perspiciatis. Magni molestiae quisquam equuntur ex quae quaerat. Nulla culpa laudantium perspiciatis. Magni modoloribus sint!...',
+            tags: ['#Frontend', '#Reactjs'],
+            date: '10 min read',
+            classType: 'coll'
+        },
+        {
+            id: 1,
+            title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor',
+            slug:'blog-slug',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNLEqNUXbu_GNn6jJvgN9Or_0KMVZt47em5rnVCS4NeRK2q3eDBUKXk-HSXnN5nfUw2s&usqp=CAU',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, nobis quos sed consequuntur ex quae quaerat. Nulla culpa laudantium perspiciatis. Magni molestiae quisquam equuntur ex quae quaerat. Nulla culpa laudantium perspiciatis. Magni modoloribus sint!...',
             tags: ['#Frontend', '#Reactjs'],
@@ -33,15 +55,15 @@ const Blog = () => {
 
                 {articles.map((article) => (
                     <article key={article.id} className={article.classType}>
-                        <a href="#">
+                        <Link to={`/blog/${article.slug}`}>
                             <img src={article.imageUrl} alt="BLOG IMG" className="article-img" />
-                        </a>
+                        </Link>
                         <div className="article-wrapper">
                             <div className="content">
-                                <a href="#">
-                                    <h1>{article.title}</h1>
-                                </a>
-                                <p>{article.content}</p>
+                                <Link to={`/blog/${article.slug}`}>
+                                    <h1>{article.title.length > 30 ? article.title.substring(0, 30) + "..." : article.title}</h1>
+                                </Link>
+                                <p>{article.content.length > 130 ? article.content.substring(0, 130) + "..." : article.content}</p>
                             </div>
                             <div className="article-gen-info">
                                 {article.tags.map((tag, index) => (

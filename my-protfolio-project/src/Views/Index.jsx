@@ -5,6 +5,8 @@ import Home from './Home';
 import Footer from '../Components/Footer';
 import Articles from './Articles';
 import Projects from './Projects';
+import Project from './Project';
+import Article from './Article';
 import ScrollToTop from '../js/scrollToTop';
 
 const Main = () => {
@@ -17,6 +19,8 @@ const Main = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/blog" element={<Articles />} />
                     <Route path="/projects" element={<Projects />} />
+                    <Route path="/project/:slug" element={<Project />} />
+                    <Route path="/blog/:slug" element={<Article />} />
                 </Routes>
                 <Footer />
                 <div className='void'></div>

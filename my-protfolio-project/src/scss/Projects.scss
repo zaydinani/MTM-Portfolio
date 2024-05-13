@@ -68,7 +68,6 @@
         margin-top: 2rem;
         padding: 0 1vw;
         @include flex();
-
         flex-wrap: wrap;
         > header {
             width: 100%;
@@ -91,12 +90,11 @@
             flex-wrap: wrap;
             padding: 5px 0;
             position: relative;
-            transition: .3s ease-in-out;
-            &:hover{
+            transition: 0.3s ease-in-out;
+            &:hover {
                 border: 1px #ffffff8f solid;
-                i{
+                i {
                     color: $hColor;
-
                 }
             }
             img {
@@ -122,7 +120,7 @@
                     text-decoration: underline;
                 }
             }
-            >h4{
+            > h4 {
                 color: $pColor;
                 font-size: 0.9rem;
                 margin: 0 1rem 0 1rem;
@@ -135,7 +133,7 @@
                 padding: 0 20px 0 0;
                 p {
                     color: $pColor;
-                    font-size: .8rem;
+                    font-size: 0.8rem;
                     margin: 0 1rem;
                 }
                 i {
@@ -185,16 +183,22 @@
     }
 }
 
+@media screen and (max-width: 1600px) {
+    #projects-container {
+        .project-boxes {
+            .project-main-box {
+                width: 30rem;
+                border: 1px $borderColor solid;
+            }
+        }
+    }
+}
 @media screen and (max-width: 1024px) {
     #projects-container {
-        .subs-wrapper {
-            width: 95% !important;
-            > div {
-                width: 95% !important;
-                > button {
-                    width: 18%;
-                    margin-left: 0;
-                }
+        .project-boxes {
+            .project-main-box {
+                width: 30rem;
+                margin: 5px;
             }
         }
     }
@@ -202,7 +206,7 @@
 @media screen and (max-width: 768px) {
     #projects-container {
         .subs-wrapper {
-            width: 100% !important;
+            width: 90% !important;
             border-radius: 0 !important;
             justify-content: space-between;
             padding: 10px 0;
@@ -227,15 +231,25 @@
                 }
             }
         }
+
+        .project-boxes {
+            .project-main-box {
+                width: 90%;
+                margin: 5px;
+            }
+        }
     }
 }
 @media screen and (max-width: 550px) {
     #projects-container {
         .subs-wrapper {
+            > p {
+                padding: 0.5rem;
+            }
             > div {
                 width: 95% !important;
-                height: 3.5rem;
-                margin: 1rem auto;
+                height: 3rem;
+                margin: 0rem auto !important;
                 > input {
                     width: 75%;
                 }
@@ -245,22 +259,49 @@
                 }
             }
         }
+        .project-boxes {
+            header > p
+            {
+               font-size: 2rem;
+            } 
+            .project-main-box {
+                width: 100%;
+                margin: 5px;
+            }
+        }
+
+        .paginate-btn {
+            padding: 2rem 0 !important;
+            > a {
+                width: 10rem !important;
+                height: 3.2rem !important;
+            }
+        }
     }
 }
 @media screen and (max-width: 350px) {
     #projects-container {
         .subs-wrapper {
+            p{
+                padding: 0;
+            }
             > div {
-                width: 95% !important;
-                height: 3.2rem;
-                margin: 1rem auto;
-                > input {
-                    width: 70%;
-                }
+                width: 100% !important;
+                height: 3rem;
                 > button {
                     width: 30%;
                     font-size: 3vw;
                 }
+            }
+        }
+        .project-boxes {
+            
+            .project-main-box {
+                width: 100%;
+                margin: .5rem 0px ;
+                height: fit-content;
+                border: none;
+                border-radius: 0 0 0 0 ;
             }
         }
     }

@@ -4,7 +4,7 @@ import { BiSolidHomeSmile } from "react-icons/bi";
 import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
-import AuthorPic from '../assets/images/author.png'
+import AuthorPic from '../assets/images/author.jpg'
 const Article = () => {
     return (
         <div className="article-container">

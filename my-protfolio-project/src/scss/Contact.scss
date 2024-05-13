@@ -95,3 +95,30 @@
     50%{transform: scale(1.1) translateY(-55%);}    
     100%{transform: scale(1) translateY(-50%);}    
 }
+
+@media screen and (max-width: 1024px) {
+    #contact-container{
+        margin-top:1rem;
+        min-height:25vh ;
+        padding: .5rem 0;
+        h3
+        {
+            font-size: 3rem;
+            padding: 0 5%;
+        }
+        >div
+        {
+            margin: 0;
+            >form
+            {
+                width: 100%;
+                margin: 0 5%;
+            }
+        
+            .svg-container{
+              display: none;
+            }
+    
+        }
+    }
+}

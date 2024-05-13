@@ -27,14 +27,13 @@ footer {
             }
             > p {
                 font-family: "Rammetto One", cursive;
-                color: red;
+                color: rgba(45, 149, 253, 0.931);
                 font-size: 3rem;
-                opacity: .85;
+                opacity: 0.85;
                 padding: 0;
             }
         }
-        h3
-        {
+        h3 {
             font-size: 2rem;
             padding: 2rem 0 1rem 0;
             text-transform: uppercase;
@@ -42,90 +41,157 @@ footer {
         }
         p {
             font-size: 0.85rem;
-            padding: .5rem 1rem;
+            padding: 0.5rem 1rem;
         }
-        a{color:$pColor;}
+        a {
+            color: $pColor;
+        }
     }
     .col-1 {
         position: relative;
         user-select: none;
-        >span{
+        > span {
             position: absolute;
             bottom: 10px;
             left: 20px;
-            font-size: .9rem;
-            b{
+            font-size: 0.9rem;
+            b {
                 color: #00a2fffc;
             }
         }
     }
-    .col-2{
-        @include flex($jc:flex-start);
+    .col-2 {
+        @include flex($jc: flex-start);
         flex-direction: column;
-      
-        li{
+
+        li {
             margin-top: 1.5rem;
-            a:hover{
+            a:hover {
                 color: #fff;
             }
         }
     }
-    .col-3{
-        @include flex($jc:flex-start);
+    .col-3 {
+        @include flex($jc: flex-start);
         flex-direction: column;
-        
-        form{
+
+        form {
             width: 100%;
             display: flex;
             flex-direction: column;
             padding: 0 1rem;
-            >input{
-                margin:.5rem 0 ;
+            > input {
+                margin: 0.5rem 0;
                 height: 2rem;
                 background: transparent;
-                border:none ;
+                border: none;
                 color: #fff;
                 border-bottom: 1px solid $pColor;
             }
-            >button{
+            > button {
                 width: 8rem;
                 height: 2.5rem;
-                margin-top: 1rem ;
+                margin-top: 1rem;
                 background: #00a2fffc;
-                transition: .5s ease-in-out;
+                transition: 0.5s ease-in-out;
                 background: linear-gradient(150deg, rgba(34, 192, 195, 0.931) 0%, rgba(45, 149, 253, 0.931) 100%);
                 border-radius: 10px;
                 cursor: pointer;
                 border: none;
-                color: #fff; 
-                position: relative;  
-                overflow: hidden;             
+                color: #fff;
+                position: relative;
+                overflow: hidden;
                 &:hover {
                     background: linear-gradient(85deg, rgba(34, 192, 195, 0.985) 0%, rgba(13, 133, 253, 0.983) 100%);
                     transform: scale(1.05);
                 }
-                >svg{
+                > svg {
                     margin-left: 5px;
                 }
-                &:hover svg{
-                    transition: .5s ease-in-out;
+                &:hover svg {
+                    transition: 0.5s ease-in-out;
                     transform: translateX(10rem);
                 }
             }
         }
-        
-        .s-m-icons{
+
+        .s-m-icons {
             align-self: flex-end;
             margin: 1rem;
-            > a svg{
+            > a svg {
                 font-size: 1.7rem;
-                margin: 0 .5rem;
-                transition: .5s ease-in-out;
-                &:hover{
+                margin: 0 0.5rem;
+                transition: 0.5s ease-in-out;
+                &:hover {
                     color: #fff;
                 }
             }
         }
     }
+}
+@media screen and (max-width: 1350px) {
+    footer {
+        width: 90%;
+        min-height: 28rem !important;
+        margin: 2rem auto 0 auto;
+        border: 1px solid #222f43;
+        font-family: $ff;
+        border-radius: 20px;
+        background: #131c31;
+        @include flex($jc: space-between);
+    }
+}
 
+@media screen and (max-width: 1024px) {
+    footer {
+        width: 90%;
+        @include flex($jc: space-between);
+        flex-direction: column;
+        min-height: 70vh !important;
+        > div {
+            width: 100% !important;
+            color: $pColor;
+            #logoContainer {
+                margin: 0.3rem 0;
+            }
+            h3 {
+                font-size: 1.5rem;
+                padding: 0.5rem;
+            }
+            p {
+                font-size: 0.85rem;
+                padding: 0.5rem;
+            }
+            a {
+                color: $pColor;
+            }
+        }
+        .col-1 {
+            position: relative;
+            user-select: none;
+
+            > span {
+                position: relative;
+                bottom: 10px;
+                left: 10px;
+            }
+        }
+        .col-2 {
+            display: none;
+        }
+        .col-3 {
+            @include flex($jc: flex-start);
+            flex-direction: column;
+
+            form {
+                width: 95%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    footer {
+        min-height: 80vh !important;
+    }
 }
