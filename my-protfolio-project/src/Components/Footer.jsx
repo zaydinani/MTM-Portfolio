@@ -7,6 +7,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 const Footer = ()=>{
+    const currentYear = new Date().getFullYear();
     return (
         <footer>
             <div className="col-1">
@@ -21,7 +22,7 @@ const Footer = ()=>{
                  My focus is on transforming code into captivating creations, ensuring a seamless and engaging user experience. With a keen eye for detail, I thrive on optimizing both front-end interfaces and back-end functionality.
                 </p>
 
-                <span>&copy; Copyright  <b>MTM</b> 2024</span>
+                <span>&copy; Copyright  <b>MTM</b> {currentYear}</span>
             </div>
             <div className="col-2">
                 <h3>Links</h3>

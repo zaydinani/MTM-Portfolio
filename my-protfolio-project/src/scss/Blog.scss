@@ -81,7 +81,7 @@
     }
 
     .paginate-btn {
-        padding: 4rem 0;
+        padding: 2rem 0;
         width: 100%;
         @include flex();
         > a {
@@ -210,3 +210,43 @@
         }
     }
 }
+.loader-comp-container{
+    width: 100%;
+    height: 50vh;
+    @include flex();
+
+.comp-loader {
+    width: 4.8px;
+    height: 4.8px;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 4px;
+    color: #48b9fafc;
+    background: currentColor;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.3s linear infinite alternate;
+  }
+  .comp-loader::after,
+  .comp-loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 4.8px;
+    height: 4.8px;
+    border-radius: 4px;
+    background: currentColor;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    animation: animloader 0.3s 0.45s linear infinite alternate;
+  }
+  .comp-loader::after {
+      top: -15px;
+      animation-delay: 0s;
+  }
+}
+  @keyframes animloader {
+      0% { width: 4.8px }
+      100% { width: 48px}
+  }

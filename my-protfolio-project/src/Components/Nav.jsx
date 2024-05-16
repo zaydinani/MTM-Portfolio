@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
-  
+    const currentYear = new Date().getFullYear();
     const toggleHam = () => {
         setIsOpen(!isOpen);
         
@@ -83,9 +83,7 @@ const Nav = () => {
                     </p>
                 </li>
                 <li>
-                    <p>
-                        Blog
-                    </p>
+                <p onClick={() => scrollToSection('blog')}>Blog</p>
                 </li>
                 <li className='contact'>
                     <p onClick={() => scrollToSection('contact-container')}>
@@ -94,7 +92,7 @@ const Nav = () => {
                 </li>
                 <div className="linksFooter">
                     <p>
-                        Copyright 2024 &copy;
+                        Copyright  {currentYear} &copy;
                         <span>MTM</span>
                     </p>
                     <p>Personal Portfolio website</p>
