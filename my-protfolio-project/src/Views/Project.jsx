@@ -1,9 +1,13 @@
 import "../scss/Project.scss";
 import { GrGallery } from "react-icons/gr";
+import React, { useEffect, useState } from 'react';
+
+
 const Project = () => {
+
+
     return (
         <div id="sp__box">
-
             <div className="single-project-section ">
                 <h1 className="project-title ">
                     Lorem ipsum dolor sit amet.
@@ -20,10 +24,10 @@ const Project = () => {
                     </p>
                     <div className="links">
                         <a href="#" id="website" title="Visit Website">
-                            <i class="fa-solid fa-link"></i>
+                            <i className="fa-solid fa-link"></i>
                         </a>
                         <a href="#" id="github" title="Visit On Github">
-                            <i class="fa-brands fa-github-alt" ></i>
+                            <i className="fa-brands fa-github-alt" ></i>
                         </a>
                         <button id="gallery" title="Show Pics">
                             <GrGallery />
@@ -59,13 +63,12 @@ const Project = () => {
 
                 </div>
 
-            </div>
-
-            {/* <div className="gallery-container">
+            </div> 
+             <div className="gallery-container">
                 <span className="close-gall">
                     X
                 </span>
-            </div> */}
+            </div>
         </div>
     )
 }

@@ -1,54 +1,6 @@
 import '../scss/Projects.scss';
 import { Link } from 'react-router-dom';
-
-// Define fake project data
-const fakeProjects = [
-  {
-    id: 1,
-    title: "E-commerce website Vuejs/Larvel",
-    slug: "ecommerce-website-vuejs-laravel",
-    type: "#Full Stack",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta odit molestias quis provident fugit!....",
-    date: "27 June 2023",
-    imageUrl: "https://genz-nextjs-v3.vercel.app/assets/imgs/page/healthy/img.png",
-    externalLink: "https://example.com",
-    githubLink: "https://github.com/example"
-  },
-  {
-    id: 1,
-    title: "E-commerce website Vuejs/Larvel",
-    slug: "ecommerce-website-vuejs-laravel",
-    type: "#Full Stack",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta odit molestias quis provident fugit!....",
-    date: "27 June 2023",
-    imageUrl: "https://genz-nextjs-v3.vercel.app/assets/imgs/page/healthy/img.png",
-    externalLink: "https://example.com",
-    githubLink: "https://github.com/example"
-  },
-  {
-    id: 1,
-    title: "E-commerce website Vuejs/Larvel",
-    slug: "ecommerce-website-vuejs-laravel",
-    type: "#Full Stack",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta odit molestias quis provident fugit!....",
-    date: "27 June 2023",
-    imageUrl: "https://genz-nextjs-v3.vercel.app/assets/imgs/page/healthy/img.png",
-    externalLink: "https://example.com",
-    githubLink: "https://github.com/example"
-  },
-  {
-    id: 1,
-    title: "E-commerce website Vuejs/Larvel",
-    slug: "ecommerce-website-vuejs-laravel",
-    type: "#Full Stack",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta odit molestias quis provident fugit!....",
-    date: "27 June 2023",
-    imageUrl: "https://genz-nextjs-v3.vercel.app/assets/imgs/page/healthy/img.png",
-    externalLink: "https://example.com",
-    githubLink: "https://github.com/example"
-  },
-  // Add more project objects as needed
-];
+import DATA from '../data/projects'
 
 const Projects = () => {
   return (
@@ -69,18 +21,20 @@ const Projects = () => {
         </header>
 
         {/* Mapping through fake project data */}
-        {fakeProjects.map((project, index) => (
+        {DATA.map((project, index) => (
           <div key={index} className="project-main-box">
             <Link to={`/project/${project.slug}`} className="project-link">
-              <img src={project.imageUrl} alt={project.title} className="project-image" />
+              <img src={project.coverImg} alt={project.slug} className="project-image" />
             </Link>
-            <p className="project-type">{project.type}</p>
+            <p className="project-type">{project.tag}</p>
             <h2 className="project-title">
               <Link to={`/project/${project.slug}`} className="project-link">
                 {project.title}
               </Link>
             </h2>
-            <h4 className="project-description">{project.description}</h4>
+            <h4 className="project-description">
+              {project.intro.length > 120 ? `${project.intro.substring(0, 120)}...` : project.intro}
+            </h4>
             <div className="date_extra-links">
               <p className="project-date">{project.date}</p>
               <div className="project-links">

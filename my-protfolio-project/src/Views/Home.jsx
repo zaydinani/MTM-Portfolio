@@ -4,7 +4,6 @@ import '../scss/Index.scss';
 import About from '../Components/About';
 import Projects from '../Components/Projects';
 import Skills from '../Components/Skills';
-import Blog from '../Components/Blog';
 import Contact from '../Components/Contact';
 
 const Home = () => {
@@ -19,8 +18,6 @@ const Home = () => {
                          <Projects /> 
                     {/* // Skills */}
                          <Skills /> 
-                    {/* // Blog */}
-                         <Blog /> 
                     {/* // contact */}
                          <Contact /> 
                  </main> 
