@@ -6,12 +6,15 @@
     position: relative;
     color: $pColor;
     font-family: $ff;
+    h1,h2,h3,h4,h5,h6{
+        color: #02dffc;
+        padding: 15px 0 ;
+    }
 }
 .single-project-section {
-    width: 70%;
+    width: 80%;
     min-height: 85vh;
     margin: 1rem auto;
-
     .project-title {
         color: $primaryColor;
         font-size: 2.5rem;
@@ -20,8 +23,8 @@
     }
     .project-cover {
         width: 100%;
-        border-radius: 10px;
-        object-fit: contain;
+        max-height: 35rem;
+        object-fit: cover;
     }
 
     .description {
@@ -29,8 +32,8 @@
         min-height: 300px;
         margin: 2rem 0;
         > img {
-            width: 250px;
-            height: 250px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
             max-width: 100%;
@@ -95,47 +98,36 @@
             font-size: 1.6rem;
             color: #0780af;
         }
-
-        .P-wrapper {
-            width: 100%;
-            min-height: 15rem;
-            margin: 1rem 0;
-
-            @include flex();
-            gap: 1rem;
-            flex-wrap: wrap;
-            padding: 2rem 0;
-            >img{
-                width: 400px;
-                height: 400px;
-                filter: blur(1px);
-                transition: .3s ease-in;
-                opacity: .8;
-                &:hover{
-                    opacity: 1;
-                    filter: blur(0) !important;
-                }
-            }
-        }
     }
+    
+    .P-wrapper {
+        width: 100%;
+        min-height: 15rem;
+        margin: 1rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 2rem 0;
+        > img {
+          width: 100%;
+          height: 300px;
+          filter: blur(1px);
+          transition: .3s ease-in;
+          opacity: .8;
+          object-fit: cover;
+          cursor: pointer;
+      
+          &:hover {
+            opacity: 1;
+            filter: blur(0) !important;
+          }
+        }
+      }
 }
 
-.gallery-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 150vh;
-    background: #00000044;
-
-    .close-gall {
-        position: absolute;
-        right: 1rem;
-        cursor: pointer;
-        color: #fff;
-        padding: 0.5rem;
-        font-size: 1.5rem;
-    }
+#gall{
+    font-size: 3rem;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {

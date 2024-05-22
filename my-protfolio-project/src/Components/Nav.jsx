@@ -50,9 +50,6 @@ const Nav = () => {
                 <li>
                     <p onClick={() => scrollToSection('my_skills')}>Toolbox</p>
                 </li>
-                <li>
-                    <p onClick={() => scrollToSection('blog')}>Blog</p>
-                </li>
                 <li className='contact'>
                     <p onClick={() => scrollToSection('contact-container')}>Contact</p>
                 </li>
@@ -81,9 +78,6 @@ const Nav = () => {
                     <p onClick={() => scrollToSection('my_skills')}>
                         Toolbox
                     </p>
-                </li>
-                <li>
-                <p onClick={() => scrollToSection('blog')}>Blog</p>
                 </li>
                 <li className='contact'>
                     <p onClick={() => scrollToSection('contact-container')}>
