@@ -1,4 +1,4 @@
-import Loader from './Views/loader';
+import Loader from './Views/Loader';
 import Index from './Views/Index';
 import './scss/App.scss';
 
